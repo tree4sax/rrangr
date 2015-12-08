@@ -1,9 +1,15 @@
 var express = require('express');
 var router = express.Router();
-var ctrlMain = require('../controllers/main');
+var ctrlArrangers = require('../controllers/arrangers');
+var ctrlOthers = require('../controllers/others');
 
 
-/* GET home page. */
-router.get('/', ctrlMain.index);
+/* arrangers pages */
+router.get('/', ctrlArrangers.homelist);
+router.get('/arranger', ctrlArrangers.arrangerInfo);
+router.get('/arranger/review/new', ctrlArrangers.addreview);
+
+// Other pages
+router.get('/about', ctrlOthers.about);
 
 module.exports = router;
