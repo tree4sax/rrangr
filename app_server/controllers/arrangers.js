@@ -1,7 +1,7 @@
 //controllers/arrangers/js
 // GET 'home' page
 module.exports.homelist = function(req, res) {
-  res.render('index', { title: 'Home' });
+  res.render('arrangers-list', { title: 'Home' });
 };
 
 // GET 'arranger info' page
