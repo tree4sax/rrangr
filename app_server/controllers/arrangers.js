@@ -6,10 +6,10 @@ module.exports.homelist = function(req, res) {
 
 // GET 'arranger info' page
 module.exports.arrangerInfo = function(req, res) {
-  res.render('index', { title: 'Arranger Info' });
+  res.render('arranger-info', { title: 'Arranger Info' });
 };
 
 // GET 'Add review' page
 module.exports.addreview = function(req, res) {
-  res.render('index', { title: 'Add Review' });
+  res.render('arranger-review-form', { title: 'Add Review' });
 };

@@ -1,0 +1,71 @@
+extends layout
+
+block content
+  .row.page-header
+    .col-lg-12
+      h1 Billy Strayhorn
+  .row
+    .col-xs-12.col-md-9
+      .row
+        .col-xs-12.col-sm-6
+          p.rating
+            span.glyphicon.glyphicon-star
+            span.glyphicon.glyphicon-star
+            span.glyphicon.glyphicon-star
+            span.glyphicon.glyphicon-star-empty
+            span.glyphicon.glyphicon-star-empty
+          p 1111 Light Street, Baltimore, MD 21230
+          .panel.panel-primary
+            .panel-heading
+              h2.panel-title Specialties
+            .panel-body
+              span.label.label-warning
+                span.glyphicon.glyphicon-ok
+                | &nbsp;Orchestral
+              | &nbsp;
+              span.label.label-warning
+                span.glyphicon.glyphicon-ok
+                | &nbsp;Chamber Ensembles
+              | &nbsp;
+              span.label.label-warning
+                span.glyphicon.glyphicon-ok
+                | &nbsp;Bluegrass
+              | &nbsp;
+      .row
+        .col-xs-12
+          .panel.panel-primary.review-panel
+            .panel-heading
+              a.btn.btn-default.pull-right(href='/arranger/review/new') Add review
+              h2.panel-title Arranger Reviews
+            .panel-body.review-container
+              .row
+                .review
+                  .well.well-sm.review-header
+                    span.rating
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                    span.reviewAuthor Trevor Specht 
+                    small.reviewTimestamp 6 December 2015
+                  .col-xs-12
+                    p This guy is a legend.
+              .row
+                .review
+                  .well.well-sm.review-header
+                    span.rating
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star-empty
+                      span.glyphicon.glyphicon-star-empty
+                    span.reviewAuthor A. Monkey 
+                    small.reviewTimestamp 1 Dec 2015
+                  .col-xs-12
+                    p BANANAS!!!!!!
+    .col-xs-12.col-md-3
+      p.lead
+        | Billy Strayhorn has been around since way before rrangr.
+      p
+        | If you have used Billy's services please leave a review to help others make a choice.
