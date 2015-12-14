@@ -10,11 +10,12 @@ block content
           small &nbsp;#{pageHeader.strapline}
   .row
     .col-xs-12.col-sm-8
+      .error= message
       .row.list-group
         each arranger in arrangers
           .col-xs-12.list-group-item
             h4 
-              a(href="/arranger")= arranger.name
+              a(href="/arranger/#{arranger._id}")= arranger.name
               small &nbsp;
                 +outputRating(arranger.rating)
               span.badge.pull-right.badge-default= arranger.experience

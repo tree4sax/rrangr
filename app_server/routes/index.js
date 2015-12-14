@@ -6,7 +6,7 @@ var ctrlOthers = require('../controllers/others');
 
 /* arrangers pages */
 router.get('/', ctrlArrangers.homelist);
-router.get('/arranger', ctrlArrangers.arrangerInfo);
+router.get('/arranger/:arrangerid', ctrlArrangers.arrangerInfo);
 router.get('/arranger/review/new', ctrlArrangers.addreview);
 
 // Other pages
