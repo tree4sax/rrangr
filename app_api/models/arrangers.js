@@ -10,7 +10,7 @@ var reviewSchema = new mongoose.Schema({
 var arrangerSchema = new mongoose.Schema({
   name: {name: String, required: false},
   emailAddress: String,
-  rating: {type: Number, "default": 0, min: 0, max: 5},
+  rating: {type: [Number], "default": 0, min: 0, max: 5},
   specialties: [String],
   reviews: [reviewSchema]
 });

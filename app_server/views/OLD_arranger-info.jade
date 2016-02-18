@@ -1,0 +1,62 @@
+extends layout
+
+include _includes/sharedHTMLfunctions
+
+block content
+  .row.page-header
+    .col-lg-12
+      h1= pageHeader.title
+  .row
+    .col-xs-12.col-md-9
+      .row
+        .col-xs-12.col-sm-6
+          p.rating
+            +outputRating(arranger.rating)
+          p= arranger.emailAddress
+          .panel.panel-primary
+            .panel-heading
+              h2.panel-title Specialties
+            .panel-body
+              each specialty in arranger.specialties
+                span.label.label-warning
+                  span.glyphicon.glyphicon-ok
+                  | &nbsp;#{specialty}
+                | &nbsp;
+      .row
+        .col-xs-12
+          .panel.panel-primary.review-panel
+            .panel-heading
+              a.btn.btn-default.pull-right(href="/arranger/#{arranger._id}/review/new") Add review
+              h2.panel-title Arranger reviews
+            .panel-body.review-container
+              .row
+                .review
+                  .well.well-sm.review-header
+                    span.rating
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                    span.reviewAuthor Trevor Specht
+                    small.reviewTimestamp #{review.createdOn}
+                  .col-xs-12
+                    p What a great guy. I can't say enough good things about him.
+              .row
+                .review
+                  .well.well-sm.review-header
+                    span.rating
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star-empty
+                      span.glyphicon.glyphicon-star-empty
+                    span.reviewAuthor Charlie Chaplin
+                    small.reviewTimestamp 16 June 2013
+                    .col-xs-12
+                      p So-so.
+    .col-xs-12.col-md-3
+      p.lead
+        | Starcups is on Loc8r because it has accessible wifi and space to sit down with your laptop and get some work done.
+      p
+        | If you've been and you like it - or if you don't - please leave a review to help other people just like you.
